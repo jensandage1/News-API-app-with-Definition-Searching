@@ -25,6 +25,12 @@ function makeNewsApiRequest(searchOptions) {
     if (searchOptions.language) {
         url += ("&language=" + searchOptions.language);
     }
+    if (searchOptions.dateFrom) {
+        url += ("&from=" + searchOptions.dateFrom);
+    }
+    if (searchOptions.dateTo) {
+        url += ("&to=" + searchOptions.dateTo);
+    }
 
     url = encodeURI(url);
     var results = {};
