@@ -31,30 +31,21 @@
           <input type="text" id="search-domain" method="get" placeholder="Source">
           <button class="button">Search</button>
         </form>
-        <form>
+        <form id="searchFormWord">
           <h4>Find the Definition of a Word:</h4>
-          <input type="text" id="search-definition" method="get" placeholder="Enter word">
-          <button class="button">Search</button>
+          <input type="text" id="userWordInput" placeholder="Enter word">
+          <button type="submit" class="button">Search</button>
+          <div class="definition-container">
+          <h3 id="word"></h3>
+          <p id="definition"></p>
+        </div>
         </form>
       </div>
     </div>
    </div>
    <div class="grid-container">
 
-   </div>
-   <div class="grid-container">
-    <div class="grid-x">
-      <div class="cell">
-        <h1>Word Definition</h1>
-        <form id="#searchFormWord">
-          <label for="userWordInput">Enter a word:</label>
-          <input type="text" id="userWordInput" required>
-          <button type="submit" class="button">Search</button>
-        </form>
-        <div class="definition-container">
-          <h3 id="word"></h3>
-          <p id="definition"></p>
-
+       <script src="./assets/main.js"></script> 
 <!--domains and countries are lists, so can search for multiples-->
 </body>
 </html>
