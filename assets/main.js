@@ -48,6 +48,31 @@ function makeNewsApiRequest(searchOptions) {
     return results;
 }
 
+function handleSearchInput() {
+    var searchKeyword = document.getElementById("search-keyword");
+    var searchLanguage = document.getElementById("search-language");
+    var searchDate = document.getElementById("search-date");
+    var searchCountry = document.getElementById("search-country");
+    var searchDomain = document.getElementById("search-domain");
+    
+    var keywordInput = searchKeyword.value;
+    var languageInput = searchLanguage.value;
+    var dateInput = searchDate.value;
+    var countryInput = searchCountry.value;
+    var domainInput = searchDomain.value;
+
+    var optionObj = {};
+    optionObj.q = keywordInput;
+    optionObj.language = languageInput;
+    optionObj.country = countryInput;
+
+    var results = makeNewsApiRequest(optionObj);
+    console.log(results);
+}
+
+var searchButton = document.getElementById("search-button");
+searchButton.addEventListener("click", handleSearchInput);
+
 var searchFormWord = document.getElementById('searchFormWord');
 var userInputWord = document.getElementById('userWordInput');
 var wordElement = document.getElementById('word');
