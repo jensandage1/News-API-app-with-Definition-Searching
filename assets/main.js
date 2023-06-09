@@ -9,40 +9,28 @@ function addCommaSeparatedParams(str, array) {
 }
 
 function makeNewsApiRequest(searchOptions) {    
-    var url = "https://newsapi.org/v2/everything?apiKey=eae3fd95544c42e79c03646924fc6cf2";
+    var url = "http://api.mediastack.com/v1/news?access_key=a0b27656eb8ca6fbf0376345a1bd8ff9";
     
-    if (searchOptions.q) {
-        url += ("&q=" + searchOptions.q);
+    if (searchOptions.keywords) {
+        url += ("&keywords=" + searchOptions.keywords);
     }
-    if (searchOptions.country) {
-        url += "&country=";
+    if (searchOptions.countries) {
+        url += "&countries=";
         url = addCommaSeparatedParams(url, searchOptions.country);
     }
-    if (searchOptions.domains) {
-        url += "&domains=";
-        url = addCommaSeparatedParams(url, searchOptions.domains);
+    if (searchOptions.languages) {
+        url += ("&languages=" + searchOptions.language);
     }
-    if (searchOptions.language) {
-        url += ("&language=" + searchOptions.language);
-    }
-    if (searchOptions.dateFrom) {
-        url += ("&from=" + searchOptions.dateFrom);
-    }
-    if (searchOptions.dateTo) {
-        url += ("&to=" + searchOptions.dateTo);
+    if (searchOptions.date) {
+        url += ("&date=" + searchOptions.date);
     }
 
     url = encodeURI(url);
     var results = {};
     fetch(url).then(function(response) {
         return response.json();
-    }).then(function(data) {
-        if (data.error === "error") {
-            results.error.code = data.code;
-            results.error.message = data.message;
-            return;
-        }
-        results.array = data.articles;
+    }).then(function(responseJson) {
+        results.array = responseJson.data;
     });
 
     return results;
@@ -64,9 +52,9 @@ function handleSearchInput(event) {
     var domainInput = searchDomain.value;
 
     var optionObj = {};
-    optionObj.q = keywordInput;
-    optionObj.language = languageInput;
-    optionObj.country = countryInput;
+    optionObj.keywords = keywordInput;
+    optionObj.languages = languageInput;
+    optionObj.countries = countryInput;
 
     var results = makeNewsApiRequest(optionObj);
     console.log(results);
