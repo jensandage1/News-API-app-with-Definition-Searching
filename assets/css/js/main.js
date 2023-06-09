@@ -1,7 +1,7 @@
 function addCommaSeparatedParams(str, array) {
     for (var i = 0; i < array.length; i++) {
         str += array[i];
-        if (i < array.length) {
+        if (i < array.length - 1) {
             str += ",";
         }
     }
@@ -14,8 +14,8 @@ function makeNewsApiRequest(searchOptions) {
     if (searchOptions.q) {
         url += ("&q=" + searchOptions.q);
     }
-    if (searchOptions.sources) {
-        url += "&sources=";
+    if (searchOptions.country) {
+        url += "&country=";
         url = addCommaSeparatedParams(url, searchOptions.sources);
     }
     if (searchOptions.domains) {
