@@ -1,4 +1,4 @@
-var searchFormWord = document.getElementById('#searchFormWord');
+var searchFormWord = document.getElementById('searchFormWord');
 var userInputWord = document.getElementById('userWordInput');
 var wordElement = document.getElementById('word');
 var definitionEl = document.getElementById('definition');
