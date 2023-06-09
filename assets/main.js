@@ -48,7 +48,9 @@ function makeNewsApiRequest(searchOptions) {
     return results;
 }
 
-function handleSearchInput() {
+function handleSearchInput(event) {
+    event.preventDefault();
+    
     var searchKeyword = document.getElementById("search-keyword");
     var searchLanguage = document.getElementById("search-language");
     var searchDate = document.getElementById("search-date");
@@ -70,8 +72,8 @@ function handleSearchInput() {
     console.log(results);
 }
 
-var searchButton = document.getElementById("search-button");
-searchButton.addEventListener("click", handleSearchInput);
+var searchForm = document.getElementById("search-form");
+searchForm.addEventListener("submit", handleSearchInput);
 
 var searchFormWord = document.getElementById('searchFormWord');
 var userInputWord = document.getElementById('userWordInput');
