@@ -13,22 +13,36 @@
       <div class="cell large-12">
         <h1>News Search</h1>
         <form id="searchForm" action = "#" method ="get"> <!-- action is just a placeholder-->
-          <div class="input-group">
-            <input type="text" id="searchQuery" placeholder = "Enter your keywords">
-            <div class="input-group-button">
-              <input type="submit" class = "button" value="search">
-            </div>
-          </div>
-          <h2>Sources:</h2>
-          <label><input type='checkbox' name= 'filter' value='filter 1'> Source 1 </label>
-          <label><input type='checkbox' name= 'filter' value='filter 2'> Source 2 </label>
-          <label><input type='checkbox' name= 'filter' value='filter 3'> Source 3 </label>
-          <label><input type='checkbox' name= 'filter' value='filter 4'> Source 4 </label>
+      
+        <form>
+          <h3>Search By Keyword:</h3>
+          <input type="text" id="search-keyword" method="get" placeholder = "Keywords">
+          <button class="button">Search</button>
+          <h3>Search by Language:</h3>
+          <input type="text" id="search-language" method="get" placeholder="Language">
+          <button class="button">Search</button>
+          <h3>Search by Date Published:</h3>
+          <input type="text" id="search-date" method="get" placeholder="Date">
+          <button class="button">Search</button>
+          <h3>Search by Country:</h3>
+          <input type="text" id="search-country" method="get" placeholder="Source">
+          <button class="button">Search</button>
+          <h3>Search by Domain:</h3>
+          <input type="text" id="search-domain" method="get" placeholder="Source">
+          <button class="button">Search</button>
+        </form>
+        <form>
+          <h4>Find the Definition of a Word:</h4>
+          <input type="text" id="search-definition" method="get" placeholder="Enter word">
+          <button class="button">Search</button>
         </form>
       </div>
     </div>
    </div>
+   <div class="grid-container">
 
-    
+   </div>
+
+<!--domains and countries are lists, so can search for multiples-->
 </body>
 </html>
