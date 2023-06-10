@@ -9,20 +9,17 @@ function addCommaSeparatedParams(str, array) {
 }
 
 function makeNewsApiRequest(searchOptions) {    
-    var url = "http://api.mediastack.com/v1/news?access_key=a0b27656eb8ca6fbf0376345a1bd8ff9";
+    var url = "https://newsdata.io/api/1/news?apikey=pub_2427444b5c3582055dfc0d123514e20901632";
     
-    if (searchOptions.keywords) {
-        url += ("&keywords=" + searchOptions.keywords);
+    if (searchOptions.q) {
+        url += ("&q=" + searchOptions.q);
     }
-    if (searchOptions.countries) {
-        url += "&countries=";
+    if (searchOptions.country) {
+        url += "&country=";
         url = addCommaSeparatedParams(url, searchOptions.country);
     }
-    if (searchOptions.languages) {
-        url += ("&languages=" + searchOptions.language);
-    }
-    if (searchOptions.date) {
-        url += ("&date=" + searchOptions.date);
+    if (searchOptions.language) {
+        url += ("&language=" + searchOptions.language);
     }
 
     url = encodeURI(url);
@@ -30,7 +27,7 @@ function makeNewsApiRequest(searchOptions) {
     fetch(url).then(function(response) {
         return response.json();
     }).then(function(responseJson) {
-        results.array = responseJson.data;
+        results.array = responseJson.results;
     });
 
     return results;
@@ -40,19 +37,19 @@ function handleSearchInput(event) {
     event.preventDefault();
     
     var searchKeyword = document.getElementById("search-keyword");
-    var searchLanguage = document.getElementById("search-language");
     var searchDate = document.getElementById("search-date");
     var searchCountry = document.getElementById("search-country");
+    var searchLanguage = document.getElementById("search-language")
     
     var keywordInput = searchKeyword.value;
-    var languageInput = searchLanguage.value;
     var dateInput = searchDate.value;
     var countryInput = searchCountry.value;
+    var languageInput = searchLanguage.value
 
     var optionObj = {};
-    optionObj.keywords = keywordInput;
-    optionObj.languages = languageInput;
-    optionObj.countries = countryInput;
+    optionObj.q = keywordInput;
+    optionObj.country = countryInput;
+    optionObj.language = languageInput;
 
     var results = makeNewsApiRequest(optionObj);
     console.log(results);
