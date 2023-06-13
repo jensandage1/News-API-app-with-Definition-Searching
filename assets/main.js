@@ -49,7 +49,14 @@ searchForm.addEventListener("submit", handleSearchInput);
 
 
 function saveArticle(headline, link, description) {
-
+    var savedArticles = JSON.parse(localStorage.getItem("savedArticles")) || [];
+    var article = {
+        headline: headline,
+        link: link,
+        description: description
+    };
+    savedArticles.push(article)
+    localStorage.setItem("savedArticles", JSON.stringify(savedArticles));
 }
 
 function makeResultsLi(headline, link, description) {
