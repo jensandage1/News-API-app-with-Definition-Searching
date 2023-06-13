@@ -3,6 +3,7 @@ var newsResults = document.getElementById("news-results");
 function makeNewsApiRequest(searchOptions) {    
     var url = "https://newsdata.io/api/1/news?apikey=pub_2427444b5c3582055dfc0d123514e20901632";
     
+    // Modify query string to include search parameters
     if (searchOptions.q) {
         url += ("&q=" + searchOptions.q);
     }
@@ -13,8 +14,8 @@ function makeNewsApiRequest(searchOptions) {
         url += ("&language=" + searchOptions.language);
     }
 
+    // Fetch data, then display results
     url = encodeURI(url);
-    var results = {};
     fetch(url).then(function(response) {
         return response.json();
     }).then(function(responseJson) {
@@ -35,6 +36,7 @@ function handleSearchInput(event) {
     var countryInput = searchCountry.value;
     var languageInput = searchLanguage.value
 
+    // Build options object to pass to makeNewsApiRequest from user input
     var optionObj = {};
     optionObj.q = keywordInput;
     optionObj.country = countryInput;
@@ -46,26 +48,38 @@ function handleSearchInput(event) {
 var searchForm = document.getElementById("search-form");
 searchForm.addEventListener("submit", handleSearchInput);
 
-
-
 function saveArticle(headline, link, description) {
-
+    var savedArticles = JSON.parse(localStorage.getItem("savedArticles")) || [];
+    var article = {
+        headline: headline,
+        link: link,
+        description: description
+    };
+    savedArticles.push(article)
+    localStorage.setItem("savedArticles", JSON.stringify(savedArticles));
 }
 
 function makeResultsLi(headline, link, description) {
+    // Build HTML elements to display
     var resultLi = document.createElement("li");
     resultLi.setAttribute("class", "results-container");
+
     var headlineA = document.createElement("a");
     headlineA.setAttribute("href", link);
     headlineA.textContent = headline;
+
     var descriptionP = document.createElement("p");
     descriptionP.textContent = description;
+
     var icon = document.createElement("i");
     icon.setAttribute("class", "fa-sharp fa-regular fa-star");
+
+    //Add individual event listeners
     icon.addEventListener("click", () => {
         saveArticle(headline, link, description);
     })
 
+    // Append to root element
     resultLi.append(headlineA);
     resultLi.append(descriptionP);
     resultLi.append(icon);
@@ -74,7 +88,6 @@ function makeResultsLi(headline, link, description) {
 }
 
 function displayResults(baseElement, results) {
-    console.log(results);
     baseElement.innerHTML = "";
 
     for (var i = 0; i < results.results.length; i++) {
