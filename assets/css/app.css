@@ -8,7 +8,7 @@ body {
 h1 {
     text-align: center;
     /*background-color: rgb(147, 180, 167);*/
-    background-image: linear-gradient(rgb(147, 180, 167), rgb(14, 88, 75));
+    background-image: linear-gradient(rgb(194, 222, 218), rgb(167, 223, 215));
     padding: 3vh;
     margin-bottom: 20px;
     border: 5px solid black;    
