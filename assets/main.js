@@ -74,7 +74,7 @@ function makeResultsLi(headline, link, description) {
     var icon = document.createElement("i");
     icon.setAttribute("class", "fa-sharp fa-regular fa-star");
 
-    //Add individual event listeners
+    // Add event listener for saving article
     icon.addEventListener("click", () => {
         saveArticle(headline, link, description);
     })
