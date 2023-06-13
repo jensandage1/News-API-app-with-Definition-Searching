@@ -15,8 +15,7 @@ function makeNewsApiRequest(searchOptions) {
         url += ("&q=" + searchOptions.q);
     }
     if (searchOptions.country) {
-        url += "&country=";
-        url = addCommaSeparatedParams(url, searchOptions.country);
+        url += ("&country=" + searchOptions.country);
     }
     if (searchOptions.language) {
         url += ("&language=" + searchOptions.language);
