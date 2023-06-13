@@ -8,42 +8,54 @@
   </head>
 </head>
 <body>
-   <div class="grid-container">
+   <div class="grid-container row">
     <div class ="grid-x grid-margin-x">
       <div class="cell large-12">
         <h1>News Search</h1>
-      
+        </div>
+
+      <aside class="grid-x grid-margin-x cell small-3 columns">
         <form id="search-form">
           <h3>Search By Keyword:</h3>
-          <input type="text" id="search-keyword" method="get" placeholder = "Enter Keywords">
-          <h3>Search by Date Published:</h3>
-          <input type="text" id="search-date" method="get" placeholder="Enter Date">
+            <input type="text" id="search-keyword" method="get" placeholder = "Enter Keywords">
+          <h3 id="search-by-date-published">Search by Date Published:</h3>
+           <input type="text" id="search-date" method="get" placeholder="Enter Date">
           <h3>Search by Country:</h3>
-          <input type="text" id="search-country" method="get" placeholder="Enter Country">
-          <h3>Search by Language</h3>
-          <input type="text" id="search-language" method="get" placeholder="Enter Language">
-          <button id="search-button" class="button">Search</button>
+            <input type="text" id="search-country" method="get" placeholder="Enter Country">
+          <h3>Search by Language:</h3>
+           <input type="text" id="search-language" method="get" placeholder="Enter Language">
+              <button id="search-button" class="button">Search</button>
         </form>
-        
+
         <form id="searchFormWord">
-          <h4>Find the Definition of a Word:</h4>
-          <input type="text" id="search-definition" method="get" placeholder="Enter word">
-          <button type="submit" id="definition" class="button">Search</button>
-          <input type="text" id="userWordInput" placeholder="Enter word">
-          <button type="submit" class="button">Search</button>
+          <h4>Find the Definition <br> of a Word:</h4>
+            <input type="text" id="search-definition" method="get" placeholder="Enter word">
+              <button type="submit" id="definition" class="button">Search</button> <!--there are two inputs and buttons, check with everyone to make sure we don't muck stuff up -->
+            <input type="text" id="userWordInput" placeholder="Enter word">
+              <button type="submit" id="definition" class="button">Search</button>
+
           <div class="definition-container">
           <h3 id="word"></h3>
           <p id="definition"></p>
         </div>
-        </form>
+      </form> 
+    </aside>
+
+     <div class="row grid-margin-x grid-x small-8 cell columns">
+       <div class= "results-container">
+        <h4>Search Results:</h4>
+        <ul id="news-results"></ul>
+        <li>list goes here</li>
       </div>
     </div>
-   </div>
-   <div class="grid-container">
-    <ul id="news-results"></ul>
-    </div>
+
+    
+      
+
+       
+ 
 
        <script src="./assets/main.js"></script> 
-<!--domains and countries are lists, so can search for multiples-->
+
 </body>
 </html>
