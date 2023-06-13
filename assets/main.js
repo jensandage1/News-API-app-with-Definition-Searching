@@ -14,7 +14,6 @@ function makeNewsApiRequest(searchOptions) {
     }
 
     url = encodeURI(url);
-    var results = {};
     fetch(url).then(function(response) {
         return response.json();
     }).then(function(responseJson) {
@@ -45,8 +44,6 @@ function handleSearchInput(event) {
 
 var searchForm = document.getElementById("search-form");
 searchForm.addEventListener("submit", handleSearchInput);
-
-
 
 function saveArticle(headline, link, description) {
     var savedArticles = JSON.parse(localStorage.getItem("savedArticles")) || [];
@@ -81,7 +78,6 @@ function makeResultsLi(headline, link, description) {
 }
 
 function displayResults(baseElement, results) {
-    console.log(results);
     baseElement.innerHTML = "";
 
     for (var i = 0; i < results.results.length; i++) {
