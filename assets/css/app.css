@@ -1,13 +1,14 @@
 
 body {
-    margin: 3em;
+    margin: 3vw;
     padding:10px;
     
 }
 
 h1 {
     text-align: center;
-    background-color: rgb(147, 180, 167);
+    /*background-color: rgb(147, 180, 167);*/
+    background-image: linear-gradient(rgb(147, 180, 167), rgb(14, 88, 75));
     padding: 3vh;
     margin-bottom: 20px;
     border: 5px solid black;    
@@ -16,17 +17,17 @@ h1 {
 }
 
 h2 {
-    font-size: 4vw;
+    font-size: 2vw;
 }
 
 h3 {
-    font-size: 3vw;
+    font-size: 2vw;
     padding-right: 2vw;
     text-align: center;
 }
 
 h4 {
-    font-size: 2.3vw;
+    font-size: 1.7vw;
     text-align: center;
 }
 
@@ -101,5 +102,17 @@ form {
     margin-top: 20px;
     text-decoration: underline;
     width: 100%;
+    
+ }
+
+ .results-container {
+    padding: 10px;
+    margin: 10px;
+    border-radius:10px;
+    background-color:rgb(147, 180, 167);
+ }
+
+ .results-container a {
+    font-weight: bolder;
     
  }
