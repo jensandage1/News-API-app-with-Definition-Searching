@@ -1,3 +1,5 @@
+var newsResults = document.getElementById("news-results");
+
 function makeNewsApiRequest(searchOptions) {    
     var url = "https://newsdata.io/api/1/news?apikey=pub_2427444b5c3582055dfc0d123514e20901632";
     
@@ -16,10 +18,8 @@ function makeNewsApiRequest(searchOptions) {
     fetch(url).then(function(response) {
         return response.json();
     }).then(function(responseJson) {
-        results.array = responseJson.results;
+        displayResults(newsResults, responseJson);
     });
-
-    return results;
 }
 
 function handleSearchInput(event) {
@@ -40,12 +40,47 @@ function handleSearchInput(event) {
     optionObj.country = countryInput;
     optionObj.language = languageInput;
 
-    var results = makeNewsApiRequest(optionObj);
-    console.log(results);
+    makeNewsApiRequest(optionObj);
 }
 
 var searchForm = document.getElementById("search-form");
 searchForm.addEventListener("submit", handleSearchInput);
+
+
+
+function saveArticle(headline, link, description) {
+
+}
+
+function makeResultsLi(headline, link, description) {
+    var resultLi = document.createElement("li");
+    resultLi.setAttribute("class", "results-container");
+    var headlineA = document.createElement("a");
+    headlineA.setAttribute("href", link);
+    headlineA.textContent = headline;
+    var descriptionP = document.createElement("p");
+    descriptionP.textContent = description;
+    var icon = document.createElement("i");
+    icon.setAttribute("class", "fa-sharp fa-regular fa-star");
+    icon.addEventListener("click", () => {
+        saveArticle(headline, link, description);
+    })
+
+    resultLi.append(headlineA);
+    resultLi.append(descriptionP);
+    resultLi.append(icon);
+
+    return resultLi;
+}
+
+function displayResults(baseElement, results) {
+    console.log(results);
+    baseElement.innerHTML = "";
+
+    for (var i = 0; i < results.results.length; i++) {
+        baseElement.append(makeResultsLi(results.results[i].title, results.results[i].link, results.results[i].description));
+    }
+}
 
 var searchFormWord = document.getElementById('searchFormWord');
 var userInputWord = document.getElementById('userWordInput');
