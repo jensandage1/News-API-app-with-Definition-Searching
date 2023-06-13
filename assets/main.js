@@ -1,13 +1,3 @@
-function addCommaSeparatedParams(str, array) {
-    for (var i = 0; i < array.length; i++) {
-        str += array[i];
-        if (i < array.length - 1) {
-            str += ",";
-        }
-    }
-    return str;
-}
-
 function makeNewsApiRequest(searchOptions) {    
     var url = "https://newsdata.io/api/1/news?apikey=pub_2427444b5c3582055dfc0d123514e20901632";
     
