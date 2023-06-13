@@ -20,33 +20,38 @@
         <form id="search-form">
           <h3>Search By Keyword:</h3>
             <input type="text" id="search-keyword" method="get" placeholder = "Enter Keywords">
-          <h3 id="search-by-date-published">Search by Date Published:</h3>
-           <input type="text" id="search-date" method="get" placeholder="Enter Date">
           <h3>Search by Country:</h3>
-          <p>If you want to search multiple countries, use the country code for each country, separated with a comma and no spaces. <br> Example: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2</p>
-            <input type="text" id="search-country" method="get" placeholder="Enter Country">
+          <h6 class="subheader">If you want to search multiple countries, use the country code for each country, separated with a comma and no spaces.</h6>
+          <a href = https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2>Examples</a>
+          <input type="text" id="search-country" method="get" placeholder="Enter Country">
           <h3>Search by Language:</h3>
-          <p>If you want to search multiple countries, use the language code for each language, separated with a comma and no spaces <br> Example: https://www.sitepoint.com/iso-2-letter-language-codes/ </p>
-           <input type="text" id="search-language" method="get" placeholder="Enter Language">
-              <button id="search-button" class="button">Search</button>
+          <h6 class="subheader">If you want to search multiple countries, use the language code for each language separated with a comma and no spaces.</h6>
+          <a href = "https://www.sitepoint.com/iso-2-letter-language-codes/">Examples</a>
+          <input type="text" id="search-language" method="get" placeholder="Enter Language">
+              <button id="search-button" class="button radius">Search</button>
         </form>
 
         <form id="searchFormWord">
           <h4>Find the Definition <br> of a Word:</h4>
            
-            <input type="text" id="userWordInput search-definition" placeholder="Enter word">
-              <button type="submit" id="definition" class="button">Search</button>
+            <input type="text" id="userWordInput" class= "search-definition" placeholder="Enter word">
+              <button type="submit" id="definition" class="button radius">Search</button>
 
           <div class="definition-container">
           <h3 id="word"></h3>
           <p id="definition"></p>
         </div>
       </form> 
+
+      <form action="/links.html" target="./links.html">
+        <h5>Saved Links</h5>
+          <button type="submit" id="saved-links" class="button">click me!!</button>
+      </form>
     </aside>
 
      <div class="row grid-margin-x grid-x small-8 cell columns">
        <div class= "results-container">
-        <h4>Search Results:</h4>
+        <h2>Search Results:</h2>
         <ol id="news-results">
         </ol>
       </div>

@@ -14,10 +14,13 @@ h1 {
     border: 5px solid black;    
     font-family:'Times New Roman', Times, serif;
     font-size: 8vw;
+    border-radius:10px;
 }
 
 h2 {
     font-size: 2vw;
+    font-weight: bold;
+    text-align: center;
 }
 
 h3 {
@@ -29,13 +32,12 @@ h3 {
 h4 {
     font-size: 1.7vw;
     text-align: center;
+  
 }
 
 #search-keyword {
     width: 80%;
     margin: 1vh;
-    /*display: inline;*/
-    
     bottom: 8px;
 
 }
@@ -43,38 +45,31 @@ h4 {
 #search-language {
     width: 80%;
     margin: 1vh;
-    /*display: inline;*/
-  
     bottom: 8px;
 }
 
-#search-date {
+/*#search-date {
     width: 80%;
     margin: 1vh;
-   /*display: inline;*/
     bottom: 8px;
-}
+}*/
 
 #search-country {
     width: 80%;
     margin: 1vh;
-/*display: inline;*/
-  
     bottom: 8px;
 }
 
 #search-domain {
     width: 80%;
     margin: 1vh;
-   /*display: inline;*/
     position: relative;
     bottom: 8px;
 }
 
-#search-definition {
+.search-definition {
     width: 80%;
     margin: 1vh;
-    /*display: inline;*/
     position: relative;
     bottom: 8px;
 }
@@ -84,6 +79,9 @@ form {
     width: 100%;
     margin-top: 20px;
     padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    border-radius:10px;
 }
 
 .button {
@@ -91,25 +89,24 @@ form {
    width: 80%;
  }
 
- #search-by-date-published {
+ /*#search-by-date-published {
     font-size: 2.5vh;
- }
+ }*/
 
  .results-container {
     border: solid black 3px;
     padding: 3vh;
     margin-left: 4vh;
     margin-top: 20px;
-    text-decoration: underline;
     width: 100%;
     
  }
 
  .results-container {
     padding: 10px;
-    margin: 10px;
+    margin: 20px;
     border-radius:10px;
-    background-color:rgb(147, 180, 167);
+    background-image: linear-gradient(rgb(234, 242, 255), rgb(188, 214, 255));
  }
 
  .results-container a {
