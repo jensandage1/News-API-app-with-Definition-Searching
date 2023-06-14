@@ -26,13 +26,11 @@ function makeNewsApiRequest(searchOptions) {
 function handleSearchInput(event) {
     event.preventDefault();
     
-    var searchKeyword = document.getElementById("search-keyword");
-    var searchDate = document.getElementById("search-date");
+    var searchKeyword = document.getElementById("search-keyword");    
     var searchCountry = document.getElementById("search-country");
     var searchLanguage = document.getElementById("search-language")
     
-    var keywordInput = searchKeyword.value;
-    var dateInput = searchDate.value;
+    var keywordInput = searchKeyword.value;    
     var countryInput = searchCountry.value;
     var languageInput = searchLanguage.value
 
