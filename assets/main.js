@@ -27,8 +27,8 @@ function handleSearchInput(event) {
     event.preventDefault();
     
     var searchKeyword = document.getElementById("search-keyword");    
-    var searchCountry = document.getElementById("search-country");
-    var searchLanguage = document.getElementById("search-language")
+    var searchCountry = document.getElementById("country-select");
+    var searchLanguage = document.getElementById("language-select")
     
     var keywordInput = searchKeyword.value;    
     var countryInput = searchCountry.value;
