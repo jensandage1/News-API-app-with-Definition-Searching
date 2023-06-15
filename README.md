@@ -15,6 +15,8 @@ This webpage has a header of News Search. There is a search form on the left of 
 
 There is a star at the bottom of each article previous that can be clicked so that the page is linked to the "saved articles" page. When the star is clicked, it goes from an outline to filled in so the user knows that their click was successful. 
 
+There is a "saved links" button under the word definition search. When that button is clicked on, user is taken to a second page displaying all of their saved articles. 
+
 Under the search form there is another input form where the user can type or paste a word to look up the definition of that word. The definition will appear below the input field. 
 
 Screenshots of live application:
