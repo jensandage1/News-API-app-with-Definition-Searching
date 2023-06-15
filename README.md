@@ -19,10 +19,10 @@ There is a "saved links" button under the word definition search. When that butt
 
 Under the search form there is another input form where the user can type or paste a word to look up the definition of that word. The definition will appear below the input field. 
 
-Screenshots of live application: https://jensandage1.github.io/Weather-API-app-with-Definition-Searching/
+Screenshots of live application: 
 
 
-This site is live at 
+This site is live at https://jensandage1.github.io/News-API-app-with-Definition-Searching/
 
 ## Credits
 
