@@ -1,7 +1,8 @@
 body {
     margin: 3vw;
     padding:10px;
-    
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
 }
 
 h1 {
@@ -87,7 +88,7 @@ form {
     padding-right: 20px;
     padding-top: 10px;
     border-radius:10px;
-    
+    background-color: white;
 }
 
 .button {

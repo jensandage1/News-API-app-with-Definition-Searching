@@ -64,6 +64,7 @@ function makeResultsLi(headline, link, description) {
 
     var headlineA = document.createElement("a");
     headlineA.setAttribute("href", link);
+    headlineA.setAttribute("target", "_blank");
     headlineA.textContent = headline;
 
     var descriptionP = document.createElement("p");
