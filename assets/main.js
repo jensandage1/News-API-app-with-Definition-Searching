@@ -75,6 +75,7 @@ function makeResultsLi(headline, link, description) {
     //Add individual event listeners
     icon.addEventListener("click", () => {
         saveArticle(headline, link, description);
+        icon.setAttribute("class", "fa-solid fa-star");
     })
 
     // Append to root element
