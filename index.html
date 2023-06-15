@@ -16,49 +16,43 @@
         <h1>News Search</h1>
         </div>
 
-      <aside class="grid-x grid-margin-x cell small-3 columns">
-        <form id="search-form">
-          <h3>Search By Keyword:</h3>
-            <input type="text" id="search-keyword" method="get" placeholder = "Enter Keywords">
-          <h3>Search by Country:</h3>
-          <h6 class="subheader">If you want to search multiple countries, use the country code for each country, separated with a comma and no spaces.</h6>
-          <a href = https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2>Examples</a>
-          <input type="text" id="search-country" method="get" placeholder="Enter Country">
-          <h3>Search by Language:</h3>
-          <h6 class="subheader">If you want to search multiple countries, use the language code for each language separated with a comma and no spaces.</h6>
-          <a href = "https://www.sitepoint.com/iso-2-letter-language-codes/">Examples</a>
-          <input type="text" id="search-language" method="get" placeholder="Enter Language">
-              <button id="search-button" class="button radius">Search</button>
-        </form>
-
-        <form id="searchFormWord">
-          <h4>Find the Definition <br> of a Word:</h4>
-           
-            <input type="text" id="userWordInput" class= "search-definition" placeholder="Enter word">
-              <button type="submit" id="definition" class="button radius">Search</button>
-
-          <div class="definition-container">
-          <h3 id="word"></h3>
-          <p id="definition"></p>
+      <div class="grid-x grid-margin-x">
+        <div class="cell large-4">
+          <form id="search-form">
+            <h3>Search By Keyword:</h3>
+              <input type="text" id="search-keyword" method="get" placeholder = "Enter Keywords">
+            <h3>Search by Country:</h3>
+            <h6 class="subheader">If you want to search multiple countries, use the country code for each country, separated with a comma and no spaces.</h6>
+            <a href = https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2>Examples</a>
+            <input type="text" id="search-country" method="get" placeholder="Enter Country">
+            <h3>Search by Language:</h3>
+            <h6 class="subheader">If you want to search multiple countries, use the language code for each language separated with a comma and no spaces.</h6>
+            <a href = "https://www.sitepoint.com/iso-2-letter-language-codes/">Examples</a>
+            <input type="text" id="search-language" method="get" placeholder="Enter Language">
+                <button id="search-button" class="button radius">Search</button>
+          </form>
+          <form id="searchFormWord">
+            <h4>Find the Definition <br> of a Word:</h4>
+            
+              <input type="text" id="userWordInput" class= "search-definition" placeholder="Enter word">
+                <button type="submit" id="definition" class="button radius">Search</button>
+            <div class="definition-container">
+              <h3 id="word"></h3>
+              <p id="definition"></p>
+            </div>
+          </form> 
+          <form action="links.html" target="links.html">
+            <h5>Saved Links</h5>
+              <button type="submit" id="saved-links" class="button">Go to Saved Articles</button>
+          </form>
         </div>
-      </form> 
-
-      <form action="links.html" target="links.html">
-        <h5>Saved Links</h5>
-          <button type="submit" id="saved-links" class="button">Go to Saved Articles</button>
-      </form>
-    </aside>
-    
-
-
-     <div class="row grid-margin-x grid-x small-8 cell columns">
-       <div class= "results-container">
-        <h2>Search Results:</h2>
-        <ol id="news-results">
-        </ol>
+        <div class= "cell large-8 results-container">
+          <h2>Search Results:</h2>
+          <ol id="news-results">
+          </ol>
+        </div>
       </div>
-    </div>
-
+        
   <div class="contact-section">
     <div class= "grid-x grid-margin-x">
    <h6 class="cell small-12 row"></h6>
