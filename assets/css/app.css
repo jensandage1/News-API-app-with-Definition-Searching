@@ -7,7 +7,7 @@ body {
 h1 {
     text-align: center;
     /*background-color: rgb(147, 180, 167);*/
-    background-image: linear-gradient(rgb(194, 222, 218), rgb(167, 223, 215));
+    background-image: linear-gradient(rgb(194, 222, 218), rgb(117, 193, 181));
     padding: 3vh;
     margin-bottom: 20px;
     border: 5px solid black;    
@@ -20,12 +20,14 @@ h2 {
     font-size: 2vw;
     font-weight: bold;
     text-align: center;
+    
 }
 
 h3 {
     font-size: 2vw;
     padding-right: 2vw;
     text-align: center;
+    margin-left: 2.5vh;
 }
 
 h4 {
@@ -38,6 +40,7 @@ h4 {
     width: 80%;
     margin: 1vh;
     bottom: 8px;
+    margin-left: 2.5vh;
 
 }
 
@@ -45,6 +48,7 @@ h4 {
     width: 80%;
     margin: 1vh;
     bottom: 8px;
+    margin-left: 2.5vh;
 }
 
 /*#search-date {
@@ -57,20 +61,22 @@ h4 {
     width: 80%;
     margin: 1vh;
     bottom: 8px;
+    margin-left: 2.5vh;
 }
 
-#search-domain {
+/*#search-domain {
     width: 80%;
     margin: 1vh;
     position: relative;
     bottom: 8px;
-}
+}*/
 
 .search-definition {
     width: 80%;
     margin: 1vh;
     position: relative;
     bottom: 8px;
+    margin-left: 2.5vh;
 }
 
 form {
@@ -81,11 +87,13 @@ form {
     padding-right: 20px;
     padding-top: 10px;
     border-radius:10px;
+    
 }
 
 .button {
    margin: 1vh;
    width: 80%;
+   margin-left: 2.5vh;
  }
 
  /*#search-by-date-published {
@@ -105,10 +113,34 @@ form {
     padding: 10px;
     margin: 20px;
     border-radius:10px;
-    background-image: linear-gradient(rgb(234, 242, 255), rgb(188, 214, 255));
+    background-image: linear-gradient(rgb(234, 242, 255), rgb(153, 184, 234));
  }
 
  .results-container a {
     font-weight: bolder;
     
  }
+
+ h5 {
+    font-size: 2vw;
+    text-align: center;
+
+ }
+
+ .subheader {
+    padding: 8px;
+ }
+
+.contact-section {
+    margin-top:3vh;
+    padding: 2vh; 
+    background-image: linear-gradient(rgb(194, 222, 218), rgb(117, 193, 181));
+    width: 100%;
+    border: solid black 2px;
+    border-radius: 10px;
+}
+
+#contact-list li {
+    display: inline;
+    padding: 20px;
+}
