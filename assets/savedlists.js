@@ -12,8 +12,8 @@ function updateVisualPositions() {
   for (var i = 0; i < listItems.length; i++) {
     var listItem = listItems[i];
     listItem.setAttribute("data-index", i);
-    var indexElement = listItem.querySelector(".index");
-    indexElement.textContent = startIndex + i;
+   
+    
   }
 }
 
@@ -51,6 +51,10 @@ function renderSavedArticles() {
           localStorage.setItem("savedArticles", JSON.stringify(savedArticles));
           listItem.remove();
           updateVisualPositions();
+
+          if(savedArticles.length === 0){
+            savedArticlesList.innerHTML = "<span>No saved articles found.</span>"
+          }
         }
       });
 
@@ -61,7 +65,7 @@ function renderSavedArticles() {
       savedArticlesList.appendChild(listItem);
     }
   } else {
-    savedArticlesList.innerHTML = "<li>No saved articles found.</li>";
+    savedArticlesList.innerHTML = "<span>No saved articles found.</span>";
   }
 
   updateVisualPositions();
