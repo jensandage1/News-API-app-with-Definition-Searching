@@ -28,6 +28,7 @@ function renderSavedArticles() {
 
       var listItem = document.createElement("li");
       listItem.setAttribute("data-index", i);
+      listItem.classList.add("results-container");
 
       var headline = document.createElement("a");
       headline.textContent = article.headline;
@@ -44,7 +45,8 @@ function renderSavedArticles() {
         event.stopPropagation(); // Prevent event bubbling
 
         var listItem = event.target.parentNode;
-        var index = parseInt(listItem.getAttribute("data-index"), 10); // 10 to be sure it'll read the data-index as integers
+        var index = parseInt(listItem.getAttribute("data-index"), 10); 
+        // 10 to be sure it'll read the data-index as integers
         
         if (index !== -1) {
           savedArticles.splice(index, 1);
