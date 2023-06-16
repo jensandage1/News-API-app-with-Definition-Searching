@@ -93,6 +93,23 @@ function displayResults(baseElement, results) {
     for (var i = 0; i < results.results.length; i++) {
         baseElement.append(makeResultsLi(results.results[i].title, results.results[i].link, results.results[i].description));
     }
+    
+    $(userInputWord).autocomplete({ 
+        source: makeAutocompleteArray(newsResults) 
+    });
+}
+
+function makeAutocompleteArray(resultsElement) {
+    var articlesText = "";
+
+    $(resultsElement).each(function() {
+        $(this).children().each(function () {
+            articlesText += $(this).text();
+        });
+    });
+
+    var regex = /[.,;"']/g;
+    return articlesText.replaceAll(regex, "").split(" ");
 }
 
 var searchFormWord = document.getElementById('searchFormWord');
@@ -131,4 +148,4 @@ searchFormWord.addEventListener('submit', function(event){
         }
     });
 });
- 
+
