@@ -108,8 +108,17 @@ function makeAutocompleteArray(resultsElement) {
         });
     });
 
-    var regex = /[.,;"']/g;
-    return articlesText.replaceAll(regex, "").split(" ");
+    var regex = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/g;
+    var wordArray = articlesText.replaceAll(regex, "").split(" ");
+    var uniqueWords = [];
+    for (var i = 0; i < wordArray.length; i++) {
+        var word = wordArray[i];
+        if (!uniqueWords.includes(word)) {
+            uniqueWords.push(word);
+        }
+    }
+
+    return uniqueWords;
 }
 
 var searchFormWord = document.getElementById('searchFormWord');
