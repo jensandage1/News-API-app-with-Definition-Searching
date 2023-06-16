@@ -151,3 +151,12 @@ form {
     list-style-type: none;
     margin-left: -24px;
 }
+
+#contact-us {
+    font-weight: bold;
+}
+
+.fa-copyright {
+    position: relative;
+    left: 40vh;
+}
