@@ -102,7 +102,7 @@ function displayResults(baseElement, results) {
 function makeAutocompleteArray(resultsElement) {
     var articlesText = "";
 
-    $(resultsElement).each(function() {
+    $(resultsElement).children().each(function() {
         $(this).children().each(function () {
             articlesText += $(this).text();
         });
