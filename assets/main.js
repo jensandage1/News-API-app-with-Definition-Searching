@@ -112,6 +112,7 @@ function makeAutocompleteArray(resultsElement) {
     var wordArray = articlesText.replaceAll(regex, "").split(" ");
     var uniqueWords = [];
     for (var i = 0; i < wordArray.length; i++) {
+        wordArray[i] = wordArray[i].toLowerCase();
         var word = wordArray[i];
         if (!uniqueWords.includes(word)) {
             uniqueWords.push(word);
