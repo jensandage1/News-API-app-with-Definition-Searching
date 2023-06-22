@@ -20,6 +20,11 @@ There is a "saved links" button under the word definition search. When that butt
 Under the search form there is another input form where the user can type or paste a word to look up the definition of that word. The definition will appear below the input field. 
 
 Screenshots of live application: 
+![Screenshot of news app showing top of the page before user input](news-app-2.png)
+![Screenshot of news app showing the bottom of the page before user input. ](news-app-1.png)
+![screenshot of news app showing what it looks like with user input. Displaying search results. ](news-app-3.png)
+![Screenshot of the news app on the saved links page. ](news-app-4.png)
+
 
 
 This site is live at https://jensandage1.github.io/News-API-app-with-Definition-Searching/
@@ -32,6 +37,8 @@ https://github.com/ErgonomicQ
 https://github.com/3aljeet
 
 https://get.foundation/
+https://fontawesome.com/
+
 
 
 ## License
